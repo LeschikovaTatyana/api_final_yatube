@@ -36,11 +36,10 @@ class CommentSerializer(serializers.ModelSerializer):
     author = StringRelatedField(
         read_only=True,
     )
-    post = serializers.PrimaryKeyRelatedField(read_only=True)
 
     class Meta:
         fields = '__all__'
-        read_only_fields = ('author',)
+        read_only_fields = ('author', 'post')
         model = Comment
 
 

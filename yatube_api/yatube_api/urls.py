@@ -7,8 +7,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('api.urls', namespace='api')),
     path('admin/', admin.site.urls),
-    path('api/v1/', include('djoser.urls')),
-    path('api/v1/', include('djoser.urls.jwt')),
     path(
         'redoc/',
         TemplateView.as_view(template_name='redoc.html'),
