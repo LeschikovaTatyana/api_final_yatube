@@ -33,9 +33,7 @@ class PostSerializer(serializers.ModelSerializer):
 
 
 class CommentSerializer(serializers.ModelSerializer):
-    author = StringRelatedField(
-        read_only=True,
-    )
+    author = StringRelatedField(read_only=True)
 
     class Meta:
         fields = '__all__'
